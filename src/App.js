@@ -27,14 +27,14 @@ function AppContent() {
   return (
     <div>
       {/* Conditionally render Navbar based on the current route */}
-      {(location.pathname === "/add-land" ||
-        location.pathname === "/land-details") && <Navbar />}
+      {(location.pathname === "/add-product" ||
+        location.pathname === "/get_product_details") && <Navbar />}
 
       <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Signin />} />
-        <Route path="/add-land" element={<AddLand />} />
-        <Route path="/land-details" element={<GetLandDetails />} />
+        <Route path="/add-product" element={<AddLand />} />
+        <Route path="/get_product_details" element={<GetLandDetails />} />
       </Routes>
     </div>
   );
