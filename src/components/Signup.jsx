@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import axios from "axios";
 
 const Signup = () => {
@@ -10,6 +11,9 @@ const Signup = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(null);
   const [failure, setFailure] = useState(null);
+
+    const navigate = useNavigate(); // For redirection
+  
 
   const submit = async (e) => {
     e.preventDefault();
@@ -33,11 +37,14 @@ const Signup = () => {
       setLoading(false);
       setSuccess(response.data.success);
 
+
       // Clear form fields
       setUsername("");
       setEmail("");
       setPassword("");
       setPhone("");
+      navigate("/");
+
     } catch (error) {
       setLoading(false);
       setFailure(error.message);
