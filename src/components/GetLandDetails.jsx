@@ -44,7 +44,7 @@ const GetLandDetails = () => {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container-fluid mt-4">
       {/* 🏞️ Banner Image */}
       <div className="text-center mb-4">
         <img
