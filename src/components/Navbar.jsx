@@ -59,7 +59,12 @@ const Navbar = ({ onLogout }) => {
                     Logout
                   </button>
                 </div>
-              ) : null}
+              ) : <div className="navbar-nav ml-auto">
+             
+                  <Link to="/signin" className="btn btn-outline-primary me-2">Sign In</Link>
+                  <Link to="/signup" className="btn btn-primary ">Sign Up</Link>
+
+            </div>}
             </div>
           </div>
         </nav>
