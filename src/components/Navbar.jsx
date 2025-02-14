@@ -38,9 +38,12 @@ const Navbar = ({ onLogout }) => {
               <Link to="/" className="nav-link">
                 Get Products
               </Link>
-              <Link to="/add-product" className="nav-link">
+              {  user && 
+
+                <Link to="/add-product" className="nav-link">
                 Add Products
               </Link>
+              }
             </div>
             <div className="ms-auto">
               {/* Display logged-in user's name/email and Logout button */}
