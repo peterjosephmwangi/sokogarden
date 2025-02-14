@@ -43,7 +43,7 @@ const Signup = () => {
       setEmail("");
       setPassword("");
       setPhone("");
-      navigate("/");
+      navigate("/signin");
 
     } catch (error) {
       setLoading(false);
@@ -109,7 +109,7 @@ const Signup = () => {
             </form>
 
             <p className="text-center mt-3">
-              Already have an account? <Link to="/">Sign In</Link>
+              Already have an account? <Link to="/signin">Sign In</Link>
             </p>
           </div>
         </div>

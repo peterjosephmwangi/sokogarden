@@ -33,7 +33,7 @@ const Signin = () => {
         localStorage.setItem("user", JSON.stringify(response.data.user));
 
         // Redirect to /land-details
-        navigate("/get_product_details");
+        navigate("/");
       } else {
         setError(response.data.message || "Login failed");
       }

@@ -14,14 +14,14 @@ const Navbar = ({ onLogout }) => {
   const handleLogout = () => {
     localStorage.removeItem("user"); // Remove user data from localStorage
     setUser(null); // Clear user state
-    navigate("/"); // Redirect to the login page
+    navigate("/signin"); // Redirect to the login page
   };
 
   return (
     <section className="container row">
       <div className="col-md-12">
         <nav className="navbar navbar-expand-md navbar-light bg-light">
-          <a href="/get_product_details" className="navbar-brand">
+          <a href="/" className="navbar-brand">
             <b>SokoGardens</b>
           </a>
           <button
@@ -35,7 +35,7 @@ const Navbar = ({ onLogout }) => {
           <div className="collapse navbar-collapse" id="navbarcollapse">
             <div className="navbar-nav">
               {/* Links to Get Lands and Add Lands */}
-              <Link to="/get_product_details" className="nav-link">
+              <Link to="/" className="nav-link">
                 Get Products
               </Link>
               <Link to="/add-product" className="nav-link">

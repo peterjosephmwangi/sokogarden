@@ -38,7 +38,7 @@ const AddProduct = () => {
       setProductCost("");
       setProductPhoto(null);
 
-      navigate("/get_product_details");
+      navigate("/");
     } catch (err) {
       setError("Failed to add product. Please try again.");
     } finally {
