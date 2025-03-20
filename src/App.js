@@ -5,6 +5,8 @@ import AddLand from "./components/AddLand";
 import GetLandDetails from "./components/GetLandDetails";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Carousel from "./components/Carousel";
+import MakePayment from "./components/MakePayment";
 
 function App() {
   return (
@@ -24,10 +26,15 @@ function AppContent() {
       {/* Conditionally render Navbar */}
       {showHeaderFooter && <Navbar />}
 
+      {/* Include the Carousel component */}
+      <Carousel />
+
       <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/add-product" element={<AddLand />} />
+        <Route path="/makepayment" element={<MakePayment />} />
+
         <Route path="/" element={<GetLandDetails />} />
       </Routes>
 
