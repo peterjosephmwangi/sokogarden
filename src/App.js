@@ -17,29 +17,30 @@ function App() {
 }
 
 function AppContent() {
-  const location = useLocation(); // Get current location
+  const location = useLocation(); // Get current route
 
-  const showHeaderFooter = location.pathname === "/add-product" || location.pathname === "/";
+  const showNavbar = ["/", "/add-product", "/makepayment"].includes(location.pathname); // Show Navbar on these pages
+  const showFooter = ["/", "/add-product"].includes(location.pathname); // Show Footer only on Home & Add Product
+  const showCarousel = location.pathname === "/"; // Show Carousel only on Home page
 
   return (
     <div>
       {/* Conditionally render Navbar */}
-      {showHeaderFooter && <Navbar />}
+      {showNavbar && <Navbar />}
 
-      {/* Include the Carousel component */}
-      <Carousel />
+      {/* Show Carousel only on Home Page */}
+      {showCarousel && <Carousel />}
 
       <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/add-product" element={<AddLand />} />
         <Route path="/makepayment" element={<MakePayment />} />
-
         <Route path="/" element={<GetLandDetails />} />
       </Routes>
 
       {/* Conditionally render Footer */}
-      {showHeaderFooter && <Footer />}
+      {showFooter && <Footer />}
     </div>
   );
 }
