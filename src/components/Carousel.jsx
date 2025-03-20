@@ -7,14 +7,14 @@ const Carousel = () => {
         <div id="mycarousel" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src="/slide1.jpg" className="d-block w-100" alt="Slide 1" />
+              <img src="/slide1.webp" className="d-block w-100" style={{height:"300px", objectFit:"contain"}} alt="Slide 1" />
             </div>
             {/* src="/banner1.webp" */}
             <div className="carousel-item">
-              <img src="/slide2.jpg" className="d-block w-100" alt="Slide 2" />
+              <img src="/slide2.webp" className="d-block w-100" style={{height:"300px", objectFit:"contain"}} alt="Slide 2" />
             </div>
             <div className="carousel-item">
-              <img src="/slide3.jpg" className="d-block w-100" alt="Slide 3" />
+              <img src="/slide3.webp" className="d-block w-100" style={{height:"300px", objectFit:"contain"}} alt="Slide 3" />
             </div>
           </div>
 
