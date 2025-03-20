@@ -22,7 +22,7 @@ const Navbar = ({ onLogout }) => {
       <div className="col-md-12">
         <nav className="navbar navbar-expand-md navbar-light bg-light">
           <a href="/" className="navbar-brand">
-            <b className="text-danger " style={{fontSize:"20px"}}>Daily<span className="text-info">Maziwa</span></b>
+            <b className="text-danger " style={{fontSize:"20px"}}>Daily<span className="text-info">Yoghurts</span></b>
           </a>
           <button
             className="navbar-toggler"
